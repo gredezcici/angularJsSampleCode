@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./content/login.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="./login-controller/loginController.js"></script>
+  <script src="./login-service/loginSubmitService.js"></script>
+
+</head>
+<body>
+  
+<div class="container">
+    <div class="row">
+    	<div class="col-md-4 col-md-offset-4">
+    		<div class="panel panel-default">
+			  	<div class="panel-heading">
+			    	<h3 class="panel-title">Login via site</h3>
+			 	</div>
+			  	<div class="panel-body" ng-app='loginApp' ng-controller="loginController as vm">
+			    	<form accept-charset="UTF-8" role="form">
+                    <fieldset>
+			    	  	<div class="form-group">
+			    		    <input class="form-control" placeholder="yourmail@example.com" name="email" type="email" ng-model='vm.username' >
+			    		</div>
+			    		<div class="form-group">
+			    			<input class="form-control" placeholder="Password" name="password" type="password" value="" ng-model='vm.password'>
+			    		</div>
+			    		<div class="checkbox">
+			    	    	<label>
+			    	    		<input name="remember" type="checkbox" value="Remember Me" ng-model='remember'> Remember Me
+			    	    	</label>
+			    	    </div>
+			    		<input class="btn btn-lg btn-success btn-block" type="submit" value="Login" ng-click='vm.popup()'>
+			    	</fieldset>
+			      	</form>
+                      <hr/>
+                    <center><h4>OR</h4></center>
+                    <input class="btn btn-lg btn-facebook btn-block" type="submit" value="Login via facebook">
+			    </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
